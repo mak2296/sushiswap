@@ -41,5 +41,13 @@ export const getAllPoolsCodeMap = async ({ currencyA, currencyB, chainId }: Omit
   dataFetcher.startDataFetching(isTest ? testLiquidityProviders : liquidityProviders)
   await dataFetcher.fetchPoolsForToken(currencyA, currencyB)
   dataFetcher.stopDataFetching()
-  return dataFetcher.getCurrentPoolCodeMap(currencyA, currencyB)
+
+  const pools = dataFetcher.getCurrentPoolCodeMap(currencyA, currencyB)
+  console.log(
+    'getAllPoolsCodeMaps dataFetcher.getCurrentPoolCodeMap',
+    currencyA.symbol,
+    currencyB.symbol,
+    Array.from(pools).map(([_, {pool}]) => `${pool.token0.symbol}, ${pool.token1.symbol}`),
+  )
+  return pools
 }
