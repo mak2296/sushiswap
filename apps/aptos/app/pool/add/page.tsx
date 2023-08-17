@@ -11,9 +11,9 @@ export function AddPage() {
     if (network?.name?.toLowerCase() === undefined) {
       disconnect()
     }
-    if (network?.name?.toLowerCase() === 'testnet' || network?.name?.toLowerCase() === 'devnet') {
+    if (network?.name?.toLowerCase() === 'mainnet' || network?.name?.toLowerCase() === 'devnet') {
       disconnect()
-      alert('Please switch network to mainnet')
+      alert('Please switch network to testnet')
     }
   }, [network])
   return (
