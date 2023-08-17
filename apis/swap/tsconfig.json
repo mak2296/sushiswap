@@ -1,0 +1,13 @@
+{
+  "extends": ["@tsconfig/strictest/tsconfig", "@tsconfig/node18/tsconfig"],
+  "include": [".graphclient", "src/**/*.ts"],
+  "exclude": ["node_modules", "dist"],
+  "compilerOptions": {
+    "resolveJsonModule": true,
+    "moduleResolution": "nodenext"
+  },
+  "ts-node": {
+    "esm": true,
+    "swc": true
+  }
+}
