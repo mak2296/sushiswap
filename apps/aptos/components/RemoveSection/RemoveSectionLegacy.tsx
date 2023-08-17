@@ -78,7 +78,7 @@ export const RemoveSectionLegacy = ({
   }, [slippagePercent, currencyAToRemove, currencyBToRemove])
 
   const removeLiquidityHandler = async () => {
-    const provider = new Provider(NETWORK.TESTNET)
+    const provider = new Provider(Network.TESTNET)
     if (!account?.address) return []
     setisTransactionPending(true)
     if (!liquidityBalance) return

@@ -71,7 +71,7 @@ const _Add: FC = () => {
   }
 
   const addLiquidity = async (close: () => void) => {
-    const provider = new Provider(NETWORK.TESTNET)
+    const provider = new Provider(Network.TESTNET)
     const payload: payloadType = liquidityArgs(
       token0.address,
       token1.address,
