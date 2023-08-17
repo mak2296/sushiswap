@@ -61,7 +61,7 @@ const _AddSectionStake: FC<AddSectionStakeProps> = ({ title, token0, token1, bal
   const { signAndSubmitTransaction } = useWallet()
   const [isTransactionPending, setTransactionPending] = useState<boolean>(false)
   const depositeLiquidity = async () => {
-    const provider = new Provider(Network.MAINNET)
+    const provider = new Provider(NETWORK.TESTNET)
     setTransactionPending(true)
 
     try {

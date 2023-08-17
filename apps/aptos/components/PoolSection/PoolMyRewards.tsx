@@ -21,7 +21,7 @@ export const PoolMyRewards: FC<Props> = ({ reward, decimals, isLoading }) => {
   const tokenAddress = decodeURIComponent(router?.id)
   const [isTransactionPending, setTransactionPending] = useState<boolean>(false)
   const harvest = async () => {
-    const provider = new Provider(Network.MAINNET)
+    const provider = new Provider(NETWORK.TESTNET)
     setTransactionPending(true)
     try {
       const response = await signAndSubmitTransaction({

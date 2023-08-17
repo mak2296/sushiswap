@@ -25,7 +25,7 @@ export const PoolHeader: FC<PoolHeader> = ({ row }) => {
             </IconList>
             <Link.External
               className="flex flex-col !no-underline group"
-              href={`https://explorer.aptoslabs.com/account/${CONTRACT_ADDRESS}/coins?network=mainnet`}
+              href={`https://explorer.aptoslabs.com/account/${CONTRACT_ADDRESS}/coins?network=testnet`}
             >
               <div className="flex items-center gap-2">
                 <Typography

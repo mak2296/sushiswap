@@ -59,7 +59,7 @@ export const _RemoveSectionUnstake: FC<AddSectionStakeProps> = ({
   const { signAndSubmitTransaction } = useWallet()
   const [isTransactionPending, setTransactionPending] = useState<boolean>(false)
   const withdrawLiquidity = async () => {
-    const provider = new Provider(Network.MAINNET)
+    const provider = new Provider(NETWORK.TESTNET)
     setTransactionPending(true)
 
     try {

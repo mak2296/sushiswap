@@ -19,7 +19,7 @@ export const getTokenDetails = async ({ address, hasToken, customTokens }: GetTo
   if (address) {
     const tokenAddress = address.split(':')
     const response = await fetch(
-      `https://fullnode.mainnet.aptoslabs.com/v1/accounts/${tokenAddress[0]}/resource/0x1::coin::CoinInfo<${address}>`
+      `https://fullnode.testnet.aptoslabs.com/v1/accounts/${tokenAddress[0]}/resource/0x1::coin::CoinInfo<${address}>`
     )
     if (response.status == 200) {
       const data = await response.json()

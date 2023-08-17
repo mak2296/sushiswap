@@ -39,7 +39,7 @@ export type FarmLP = {
 
 const farmsQueryFn = async () => {
   const response = await fetch(
-    `https://fullnode.mainnet.aptoslabs.com/v1/accounts/${MASTERCHEF_CONTRACT}/resource/${MASTERCHEF_CONTRACT}::masterchef::MasterChef`
+    `https://fullnode.testnet.aptoslabs.com/v1/accounts/${MASTERCHEF_CONTRACT}/resource/${MASTERCHEF_CONTRACT}::masterchef::MasterChef`
   )
   if (response.status == 200) {
     const data: FarmLP = await response.json()

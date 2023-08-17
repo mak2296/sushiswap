@@ -78,7 +78,7 @@ export const TradeStats = () => {
             <span className="font-semibold text-gray-700 text-right dark:text-slate-400">
               <a
                 target="_blank"
-                href={`https://explorer.aptoslabs.com/account/${account?.address}?network=mainnet`}
+                href={`https://explorer.aptoslabs.com/account/${account?.address}?network=testnet`}
                 className={classNames('transition-all flex gap-1 items-center')}
                 rel="noreferrer"
               >

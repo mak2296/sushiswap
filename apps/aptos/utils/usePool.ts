@@ -4,7 +4,7 @@ const CONTRACT_ADDRESS = process.env['SWAP_CONTRACT'] || process.env['NEXT_PUBLI
 export const getPoolQueryFn = async (address: string) => {
   if (address) {
     const response = await fetch(
-      `https://fullnode.mainnet.aptoslabs.com/v1/accounts/${CONTRACT_ADDRESS}/resource/${CONTRACT_ADDRESS}::swap::TokenPairMetadata<${address}>`
+      `https://fullnode.testnet.aptoslabs.com/v1/accounts/${CONTRACT_ADDRESS}/resource/${CONTRACT_ADDRESS}::swap::TokenPairMetadata<${address}>`
     )
     if (response.status == 200) {
       const pair = await response.json()

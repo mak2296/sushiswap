@@ -28,7 +28,7 @@ export const TradeReviewDialog: FC<Props> = ({ isTransactionPending }) => {
   const { setisTransactionPending, setAmount } = useSwapActions()
   const minOutput = slippageAmount ? formatNumber(slippageAmount, token1 ? token1.decimals : 8) : 0
   const swapToken = async (close: () => void) => {
-    const provider = new Provider(Network.MAINNET)
+    const provider = new Provider(NETWORK.TESTNET)
     const payload: any = payloadArgs(
       parseInt((parseFloat(String(amount)) * 10 ** token0.decimals) as unknown as string),
       bestRoutes,
@@ -150,7 +150,7 @@ export const TradeReviewDialog: FC<Props> = ({ isTransactionPending }) => {
                       <List.KeyValue title="Recipient">
                         <a
                           target="_blank"
-                          href={`https://explorer.aptoslabs.com/account/${account?.address}?network=mainnet`}
+                          href={`https://explorer.aptoslabs.com/account/${account?.address}?network=testnet`}
                           className={classNames('flex items-center gap-2 cursor-pointer text-blue')}
                           rel="noreferrer"
                         >

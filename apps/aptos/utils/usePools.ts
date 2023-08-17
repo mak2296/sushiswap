@@ -41,7 +41,7 @@ export type Pool = {
 
 export async function fetchPoolsQueryFn() {
   const CONTRACT_ADDRESS = process.env['NEXT_PUBLIC_SWAP_CONTRACT']
-  const response = await fetch(`https://fullnode.mainnet.aptoslabs.com/v1/accounts/${CONTRACT_ADDRESS}/resources`)
+  const response = await fetch(`https://fullnode.testnet.aptoslabs.com/v1/accounts/${CONTRACT_ADDRESS}/resources`)
   if (response.status == 200) {
     const data = await response.json()
     const coinPair: Pool[] = data.filter((pair: Pool) => {

@@ -28,7 +28,7 @@ export async function useAllCommonPairs(amount_in = 0, coinA: Token, coinB: Toke
     }
   }
   let reserves
-  await fetch(`https://fullnode.mainnet.aptoslabs.com/v1/accounts/${CONTRACT_ADDRESS}/resources`)
+  await fetch(`https://fullnode.testnet.aptoslabs.com/v1/accounts/${CONTRACT_ADDRESS}/resources`)
     .then((res) => res.json())
     .then((data) => {
       let t: any = {}
@@ -121,7 +121,7 @@ export async function getPoolPairs() {
     let inverse = false
     try {
       setLoadingPrice(true)
-      await fetch(`https://fullnode.mainnet.aptoslabs.com/v1/accounts/${CONTRACT_ADDRESS}/resources`)
+      await fetch(`https://fullnode.testnet.aptoslabs.com/v1/accounts/${CONTRACT_ADDRESS}/resources`)
         .then((res) => res.json())
         .then((data) => {
           reserves = data.filter((d: TokenPairReserve) => {

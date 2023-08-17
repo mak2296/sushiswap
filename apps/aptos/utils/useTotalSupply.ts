@@ -31,7 +31,7 @@ export type CoinInfo = {
 const totalSupplyQueryFn = async (tokenAddress: string) => {
   if (tokenAddress) {
     const response = await fetch(
-      `https://fullnode.mainnet.aptoslabs.com/v1/accounts/${CONTRACT_ADDRESS}/resource/0x1::coin::CoinInfo<${CONTRACT_ADDRESS}::swap::LPToken<${tokenAddress}>>`
+      `https://fullnode.testnet.aptoslabs.com/v1/accounts/${CONTRACT_ADDRESS}/resource/0x1::coin::CoinInfo<${CONTRACT_ADDRESS}::swap::LPToken<${tokenAddress}>>`
     )
     if (response.status == 200) {
       const data = await response.json()
