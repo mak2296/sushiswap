@@ -94,6 +94,7 @@ const _Add = () => {
     }
   }, [network])
   if (!pool?.id) return <></>
+  if (farmIndex === -1) return <>\</>
   return (
     <>
       {isLoadingAccount && <Loading />}

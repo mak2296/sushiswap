@@ -14,7 +14,6 @@ import { useWallet } from '@aptos-labs/wallet-adapter-react'
 export default function Pool() {
   const { isLoadingAccount } = useAccount()
   const { network, disconnect } = useWallet()
-  console.log(network)
   useEffect(() => {
     if (network?.name?.toLowerCase() === undefined) {
       disconnect()
