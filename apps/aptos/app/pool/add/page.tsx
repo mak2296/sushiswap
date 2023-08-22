@@ -5,7 +5,7 @@ import React, { FC, useEffect } from 'react'
 import { Add } from '../Pool/PoolPage'
 import { useWallet } from '@aptos-labs/wallet-adapter-react'
 
-export function AddPage() {
+export default function AddPage() {
   const { network, disconnect } = useWallet()
   useEffect(() => {
     if (network?.name?.toLowerCase() === undefined) {
@@ -42,5 +42,3 @@ const _Add: FC = () => {
     </>
   )
 }
-
-export default AddPage

@@ -12,6 +12,7 @@
     "build-protocols-head": "dotenv -- turbo run build --filter={./protocols/*}[HEAD^1]...",
     "build-scripts": "dotenv -- turbo run build --filter={./scripts/*}[HEAD^1]...",
     "build-earn-app": "dotenv -- turbo run build --filter=earn...[HEAD^1]",
+    "build-aptos-app": "dotenv -- turbo run build --filter=aptos...[HEAD^1]",
     "changeset": "changeset",
     "changeset-publish": "changeset publish",
     "changeset-version": "changeset version",

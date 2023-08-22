@@ -1,10 +1,8 @@
-import React, { FC, memo } from 'react'
+import React, { memo } from 'react'
 import { ContentBlock } from '../ContentBlock'
 import { Button } from '@sushiswap/ui/future/components/button'
 
-interface SelectNetworkWidgetProps {}
-
-export const SelectNetworkWidget: FC<SelectNetworkWidgetProps> = memo(function SelectNetworkWidget({}) {
+export const SelectNetworkWidget = memo(function SelectNetworkWidget({}) {
   return (
     <ContentBlock
       title={

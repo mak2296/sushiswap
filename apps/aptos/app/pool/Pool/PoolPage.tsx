@@ -59,6 +59,8 @@ export function Add() {
 }
 
 const _Add: FC = () => {
+  const { setToken0, setToken1, setAmount0, setAmount1, setisTransactionPending } = usePoolActions()
+  const { token0, token1, amount0, amount1, isPriceFetching, poolPairRatio, pairs } = usePoolState()
   const { network, disconnect, account, signAndSubmitTransaction, connected } = useWallet()
   const [error0, setError0] = useState('')
   const [error1, setError1] = useState('')
@@ -104,8 +106,6 @@ const _Add: FC = () => {
     }
   }
 
-  const { setToken0, setToken1, setAmount0, setAmount1, setisTransactionPending } = usePoolActions()
-  const { token0, token1, amount0, amount1, isPriceFetching, poolPairRatio, pairs } = usePoolState()
   const { data: balance0, isLoading: isLoadingBalance0 } = useTokenBalance({
     account: account?.address as string,
     currency: token0.address,
@@ -114,6 +114,7 @@ const _Add: FC = () => {
     account: account?.address as string,
     currency: token1.address,
   })
+  console.log(pairs)
   const tradeVal = useRef<HTMLInputElement>(null)
   const tradeVal1 = useRef<HTMLInputElement>(null)
   const onChangeToken0TypedAmount = useCallback(

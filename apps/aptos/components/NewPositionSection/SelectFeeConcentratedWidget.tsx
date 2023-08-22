@@ -24,12 +24,7 @@ export const FEE_OPTIONS = [
   },
 ]
 
-interface SelectFeeConcentratedWidget {
-  // feeAmount: FeeAmount | undefined
-  // setFeeAmount: (fee:FeeAmount) => void
-}
-
-export const SelectFeeConcentratedWidget: FC<SelectFeeConcentratedWidget> = memo(function SelectFeeWidget(
+export const SelectFeeConcentratedWidget = memo(function SelectFeeWidget(
   {
     // feeAmount,
     // setFeeAmount

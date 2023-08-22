@@ -1,7 +1,6 @@
 import { FC, ReactNode, createContext, useContext, useMemo, useReducer } from 'react'
 import { Token } from 'utils/tokenType'
 import { getTokensWithoutKey } from 'utils/useTokens'
-import { useWallet } from '@aptos-labs/wallet-adapter-react'
 
 interface PoolProviderProps {
   children: ReactNode
