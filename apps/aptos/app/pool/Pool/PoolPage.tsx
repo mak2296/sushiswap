@@ -64,6 +64,7 @@ const _Add: FC = () => {
   const { network, disconnect, account, signAndSubmitTransaction, connected } = useWallet()
   const [error0, setError0] = useState('')
   const [error1, setError1] = useState('')
+  console.log(poolPairRatio)
 
   type payloadType = {
     type: string
@@ -138,7 +139,7 @@ const _Add: FC = () => {
       setAmount1(value)
       if (pairs?.data) {
         if (value) {
-          setAmount0(String(parseFloat(String(value)) * poolPairRatio))
+          setAmount0(String(parseFloat(String(value)) / poolPairRatio))
         } else {
           setAmount0('')
         }
