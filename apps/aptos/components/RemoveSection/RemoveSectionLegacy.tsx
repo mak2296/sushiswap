@@ -69,12 +69,12 @@ export const RemoveSectionLegacy = ({
       currencyAToRemove
         ? slippagePercent === 0
           ? Math.floor(currencyAToRemove)
-          : Math.floor(currencyAToRemove - (currencyAToRemove * slippagePercent) / 100)
+          : Math.floor(currencyAToRemove - currencyAToRemove * slippagePercent)
         : undefined,
       currencyBToRemove
         ? slippagePercent === 0
           ? Math.floor(currencyBToRemove)
-          : Math.floor(currencyBToRemove - (currencyBToRemove * slippagePercent) / 100)
+          : Math.floor(currencyBToRemove - currencyBToRemove * slippagePercent)
         : undefined,
     ]
   }, [slippagePercent, currencyAToRemove, currencyBToRemove])
