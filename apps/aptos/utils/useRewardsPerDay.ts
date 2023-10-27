@@ -13,7 +13,7 @@ export function useRewardsPerDay(
         ? farms?.data?.total_regular_alloc_point
         : farms?.data?.total_special_alloc_point
       return formatNumber(
-        (Number(farms?.data?.sushi_per_second) *
+        (Number(farms?.data?.aptos_per_second) *
           SECONDS_PER_DAY *
           Number(farms?.data?.pool_info?.[farmIndex]?.alloc_point)) /
           Number(total_allocPoint),

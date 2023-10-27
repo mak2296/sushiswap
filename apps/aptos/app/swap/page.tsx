@@ -14,7 +14,6 @@ import { TradeReviewDialog } from 'components/TradeReviewDialog'
 import { useSwapActions, useSwapState } from './trade/TradeProvider'
 import { SwapTradeInput } from 'components/SwapTradeInput'
 import { SwapTradeOutput } from 'components/SwapTradeOutput'
-import { getTokensWithoutKey } from 'utils/useTokens'
 import { TradeStats } from 'components/TradeStats'
 import { useAccount } from 'utils/useAccount'
 
@@ -23,7 +22,6 @@ export default function SwapPage() {
   const { setToken0, setToken1 } = useSwapActions()
   const { token0, token1, isTransactionPending } = useSwapState()
   const { isLoadingAccount } = useAccount()
-  // const tokensWithoutKey = getTokensWithoutKey()
   useEffect(() => {
     if (network?.name?.toLowerCase() === undefined) {
       disconnect()

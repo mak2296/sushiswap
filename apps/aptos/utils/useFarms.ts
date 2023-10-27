@@ -4,7 +4,7 @@ const MASTERCHEF_CONTRACT = process.env['MASTERCHEF_CONTRACT'] || process.env['N
 const CONTRACT_ADDRESS = process.env['SWAP_CONTRACT'] || process.env['NEXT_PUBLIC_SWAP_CONTRACT']
 
 type PoolInfo = {
-  acc_sushi_per_share: string
+  acc_aptos_per_share: string
   alloc_point: string
   is_regular: boolean
   last_reward_timestamp: string
@@ -28,9 +28,9 @@ export type FarmLP = {
     signer_cap: {
       account: string
     }
-    sushi_per_second: string
-    sushi_rate_to_regular: string
-    sushi_rate_to_special: string
+    aptos_per_second: string
+    aptos_rate_to_regular: string
+    aptos_rate_to_special: string
     total_regular_alloc_point: string
     total_special_alloc_point: string
     upkeep_admin: string
