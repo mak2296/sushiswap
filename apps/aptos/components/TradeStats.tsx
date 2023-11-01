@@ -15,19 +15,19 @@ import { warningSeverity, warningSeverityClassName } from 'lib/swap/warningSever
 export const TradeStats = () => {
   const { token0, token1, amount, bestRoutes, isLoadingPrice, isPriceFetching, outputAmount, slippageAmount } =
     useSwapState()
-  const { account, network } = useWallet()
+  const { account } = useWallet()
   const loading = Boolean(isLoadingPrice && Number(amount) > 0) || isPriceFetching
   const outputSwapTokenAmount = outputAmount
     ? String(formatNumber(parseFloat(outputAmount), token1 ? token1.decimals : 8))
     : ''
 
   const minOutput = slippageAmount ? formatNumber(slippageAmount, token1 ? token1.decimals : 8) : 0
-  const { data: balance, isLoading: isPriceLoading } = useTokenBalance({
+  const { data: balance } = useTokenBalance({
     account: account?.address as string,
     currency: token0?.address,
     refetchInterval: 2000,
   })
-  const { data: routes, isFetching } = useSwapRouter({
+  const { data: routes } = useSwapRouter({
     balance,
   })
 

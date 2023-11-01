@@ -1,6 +1,4 @@
 import { FC, ReactNode, createContext, useContext, useMemo, useReducer } from 'react'
-import getTokenFromAddress from 'utils/getTokenFromAddress'
-import { getTokenData } from 'utils/tokenData'
 import { Token } from 'utils/tokenType'
 import { getTokensWithoutKey } from 'utils/useTokens'
 
